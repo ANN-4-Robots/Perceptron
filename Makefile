@@ -16,6 +16,7 @@ all: clean $(TARGET)
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
 	@echo " $(CC) $^ -o $(TARGET) $(OGLFLAGS)"; $(CC) $^ -o $(TARGET) $(OGLFLAGS) 
+	@echo " $(RM) -r $(BUILDDIR)"; $(RM) -r $(BUILDDIR)
 	./bin/neat
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
@@ -25,6 +26,6 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 
 clean:
 	@echo " Cleaning..."; 
-	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
+	@echo " $(RM) -r $(BUILDDIR)"; $(RM) -r $(BUILDDIR)
 
 .PHONY: clean

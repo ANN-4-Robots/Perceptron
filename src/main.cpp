@@ -18,7 +18,7 @@ int main() {
     for ( int i = 0; i < 2000; ++i )
         drawSet.emplace_back();
 
-    bool trained{};
+    // bool trained{};
 
     // Main loop
     while ( win.isOpen() ) {

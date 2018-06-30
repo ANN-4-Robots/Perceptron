@@ -18,7 +18,7 @@ int main() {
     for ( int i = 0; i < 2000; ++i )
         drawSet.emplace_back();
 
-    // bool trained{};\
+    // bool trained{};
 
     // Main loop
     while ( win.isOpen() ) {
@@ -37,7 +37,7 @@ int main() {
         }
 
         // Training until
-        for ( int i = 0, j = 0; i < 10000; ++i ) {
+        for ( int i = 0; i < 10000; ++i ) {
             TrainP trainP;                                  // Create random training point
             pepe.train( trainP.coords, trainP.isAbove );
         }

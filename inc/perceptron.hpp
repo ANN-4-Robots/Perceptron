@@ -10,7 +10,7 @@ struct Perceptron {
     Perceptron( int inputsNum = 2 ) {
         wages.resize( inputsNum + 1 );
         for ( auto& wage : wages ) {
-            wage = float( rand()%1000 / 500 ) -1;
+            wage = float(rand()%1000) / 500 -1;
         }
     }
     
